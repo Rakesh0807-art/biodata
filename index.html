@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bio-Data Builder</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+  #payment-section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 10px auto;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #fefefe;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  }
+
+  #payment-section img {
+    border: 2px solid #222;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+</style>
+
+</head>
+<body>
+
+  <h1>BIO-DATA BUILDER</h1>
+
+  <div class="container">
+    <div class="form-section">
+      <h2>Enter Your Details</h2>
+      <input type="text" id="name" placeholder="Name">
+      <input type="text" id="father" placeholder="Father Name (with profession)">
+      <input type="text" id="mother" placeholder="Mother Name (with profession)">
+      <input type="text" id="dob" placeholder="D.O.B (e.g., 11/07/1996 7.45pm)">
+      <input type="text" id="height" placeholder="Height (e.g., 5.6 ft)">
+      <input type="text" id="religion" placeholder="Religion">
+      <input type="text" id="caste" placeholder="Caste">
+      <input type="text" id="homegod" placeholder="Home God">
+      <input type="text" id="birthplace" placeholder="Place of Birth">
+      <input type="text" id="rashi" placeholder="Rashi">
+      <input type="text" id="nakshatra" placeholder="Nakshatra">
+      <input type="text" id="education" placeholder="Education">
+      <input type="text" id="job" placeholder="Job Description & Company">
+      <input type="text" id="salary" placeholder="Salary">
+      <input type="number" id="siblings" placeholder="Siblings Count">
+      <input type="text" id="farmland" placeholder="Farm Land (sheep, coconut, dry land)">
+      <textarea id="address" placeholder="Full Home Address"></textarea>
+      <input type="text" id="phone" placeholder="Phone Numbers (comma separated)">
+      <select id="theme-color">
+  <option value="#000000">Black</option>
+  <option value="#0d47a1">Blue</option>
+  <option value="#2e7d32">Green</option>
+  <option value="#c62828">Red</option>
+  <option value="#6a1b9a">Purple</option>
+</select>
+<br>
+<label for="photo">Upload Profile Photo (optional):</label>
+<input type="file" id="photo" accept="image/*">
+
+
+
+
+<button onclick="generateBioData()">Generate Bio-Data</button>
+
+<button onclick="payAndDownload()"> Download PDF</button>
+<a href="#about">About</a>
+<div id="about" style="margin-top: 40px; text-align: center;">
+  <h3>About This App</h3>
+  <p>AiBio-data Builder is a simple and smart biodata generator built by <strong>Rakesh A M</strong> <strong>CEO of AI Resume Builder 
+  </strong> & the company members</p>
+  <p>Our goal is to help anyone to create stunning bio-data in seconds.</p>
+</div>
+
+    </div>
+
+    <div class="preview-section" id="biodata-preview">
+      <!-- Bio-Data will be shown here -->
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
